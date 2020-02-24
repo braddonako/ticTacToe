@@ -50,16 +50,11 @@ function handleClick(e){
         swapTurns()
         setBoardHoverClass()
     }
-    //check for a draw
-
-    //switch turns
-    swapTurns()
-    setBoardHoverClass()
 }
 
 function endGame(draw) {
     if (draw) {
-        winningMessageElement.innerText = 'Draw!'
+        winningMessageTextElement.innerText = 'Draw!'
     } else {
         winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Win!`
     }
