@@ -10,6 +10,8 @@
 
 body {
    margin: 0; 
+   /* background-image: url(JOELOUISweb1-articleLarge.jpg); */
+   background-size: cover;
 }
 
 .board {
@@ -22,23 +24,26 @@ body {
     align-items: center;
     align-content: center;
     grid-template-columns: repeat(3, auto);
+    
 }
 
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid black; 
+    border: 2px solid red; 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
+    
 }
 
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
     border-top: none;
+    
 }
 
 .cell:first-child,
@@ -68,12 +73,14 @@ body {
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.circle):not(.x):hover::before {
     background-color: lightgrey;
+    
 }
 
 .cell.x::before,
 .cell.x::after,
 .cell.circle::before {
     background-color: black;
+
 }
 
 
@@ -82,7 +89,7 @@ body {
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
     content: '';
-     position: absolute;
+    position: absolute;
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
 }
